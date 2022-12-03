@@ -13,8 +13,8 @@ GAME = {"Rock": {"Rock": 4, "Paper": 1, "Scissors": 7},  # Player plays rock, op
 # Read and parse data
 games = [move.split(" ") for move in Path("data/day_02.txt").read_text().split("\n")]  # ["C X", "C Y", "B X", ...]
 
-# Game 1
+# Game 1: execute moves according to the game description and look up score
 sum([GAME[ENCODING[player]][ENCODING[elf]] for elf, player in games])
 
-# Game 2
+# Game 2: act according to win/draw/loss instruction, find correct move, then look up score
 sum([GAME[ENCODING_GAME2[player][ENCODING[elf]]][ENCODING[elf]] for elf, player in games])
