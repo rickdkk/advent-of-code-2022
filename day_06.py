@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 # %% Read data
 characters = Path("data/day_06.txt").read_text()
 
