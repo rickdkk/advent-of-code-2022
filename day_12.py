@@ -17,7 +17,7 @@ for row, line in enumerate(Path("data/day_12.txt").read_text().split("\n")):
     hills.append(current_line)
 
 
-# %% Question 1:
+# %% Question 1: find the fastest route from start to finish
 
 def breadth_first_search(grid: list[list[int]], start: tuple[int, int], end: tuple[int, int]) -> Optional[int]:
     queue = [(0, start)]  # nsteps is recorded along with the next index
@@ -37,7 +37,7 @@ def breadth_first_search(grid: list[list[int]], start: tuple[int, int], end: tup
 
 breadth_first_search(hills, start_pos, end_pos)
 
-# %% Question 2
+# %% Question 2: find the shortest climb
 distances = []
 for y_axis, row in enumerate(hills):
     for x_axis, col in enumerate(row):
